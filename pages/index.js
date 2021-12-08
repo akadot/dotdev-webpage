@@ -1,10 +1,14 @@
-import styled from 'styled-components'
+import Head from 'next/head'
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
 
 export default function Home() {
-  return <Title>My page</Title>
+  return (
+    <>
+      <Head>
+        <title>dot_</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <h1>My page</h1>
+    </>
+  );
 }
