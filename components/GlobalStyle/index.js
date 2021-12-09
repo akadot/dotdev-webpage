@@ -9,6 +9,8 @@ const GlobalStyle = createGlobalStyle`
 }
 
 html,body{
+	background-color: #0F1921;
+	color: #fff;
 	height: 100vh;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
