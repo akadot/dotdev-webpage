@@ -6,8 +6,7 @@ import Email from '../components/Email'
 
 export default function App({ Component, pageProps }) {
   return (
-    <PageContainer>
-
+    <>
       <GlobalStyle />
 
       <HeaderContainer>
@@ -15,12 +14,12 @@ export default function App({ Component, pageProps }) {
         <Menu />
       </HeaderContainer>
 
+      <Social />
       <ContentContainer>
-        <Social />
         <Component {...pageProps} />
-        <Email />
       </ContentContainer>
+      <Email />
 
-    </PageContainer>
+    </>
   )
 }
