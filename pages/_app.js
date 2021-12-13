@@ -6,20 +6,18 @@ import Email from '../components/Email'
 
 export default function App({ Component, pageProps }) {
   return (
-    <>
+    <PageContainer>
       <GlobalStyle />
 
-      <HeaderContainer>
-        <p>Logo</p>
-        <Menu />
+      <HeaderContainer className="header">
+        <p className="logo">Logo</p>
+        <Menu className="menu" />
       </HeaderContainer>
 
-      <Social />
-      <ContentContainer>
-        <Component {...pageProps} />
-      </ContentContainer>
-      <Email />
+      <Social className="social" />
+      <Component {...pageProps} className="content" />
+      <Email className="email" />
 
-    </>
+    </PageContainer>
   )
 }
