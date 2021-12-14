@@ -32,8 +32,6 @@ const PageContainer = styled.section`
 	&.email{
 		grid-area: email;
 	}
-
-	
 `;
 
 const HeaderContainer = styled.header`
@@ -49,8 +47,4 @@ const HeaderContainer = styled.header`
 	align-items: center;
 `;
 
-const ContentContainer = styled.div`
-	
-`;
-
-export { PageContainer, HeaderContainer, ContentContainer }
+export { PageContainer, HeaderContainer }

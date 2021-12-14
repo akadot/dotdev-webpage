@@ -1,23 +1,36 @@
 import GlobalStyle from '../components/GlobalStyle'
+import Image from 'next/image'
+import { PageContainer, HeaderContainer } from "../components/Layout"
 import Menu from '../components/Menu'
-import { PageContainer, HeaderContainer, ContentContainer } from "../components/Layout"
 import Social from '../components/Social'
 import Email from '../components/Email'
 
 export default function App({ Component, pageProps }) {
   return (
-    <PageContainer>
-      <GlobalStyle />
+    <>
+      <Image
+        alt="Background Pattern"
+        src="/bg.png"
+        layout='fill'
+        objectFit='cover'
+        quality={75}
+        className='background'
+      />
 
-      <HeaderContainer className="header">
-        <p className="logo">Logo</p>
-        <Menu className="menu" />
-      </HeaderContainer>
+      <PageContainer>
 
-      <Social className="social" />
-      <Component {...pageProps} className="content" />
-      <Email className="email" />
+        <GlobalStyle />
 
-    </PageContainer>
+        <HeaderContainer className="header">
+          <p className="logo">Logo</p>
+          <Menu className="menu" />
+        </HeaderContainer>
+
+        <Social className="social" />
+        <Component {...pageProps} className="content" />
+        <Email className="email" />
+
+      </PageContainer>
+    </>
   )
 }
