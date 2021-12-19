@@ -9,7 +9,7 @@ const SocialContainer = styled.div`
 	align-self: flex-end;
 	display: block;
 	bottom: 160px;
-	left: 100px;
+	left: 70px;
 	position: relative;
 
 	@media (max-width: 1100px){
@@ -23,6 +23,7 @@ const Icons = styled.div`
 	align-itens: center;
 	gap:20px;
 	position:relative;
+	text-align: left;
 
 	&::before{
 		content: "";
@@ -60,12 +61,29 @@ export default function IconBar() {
 	return (
 		<SocialContainer>
 			<Icons>
-				<FontAwesomeIcon icon={['fab', 'github']} size="2x" color="#757FF8" /*var(--blue)*/ />
-				<FontAwesomeIcon icon={['fab', 'linkedin-in']} size="2x" color="#757FF8" />
-				<FontAwesomeIcon icon={['fab', 'dev']} size="2x" color="#757FF8" />
-				<FontAwesomeIcon icon={['fab', 'medium']} size="2x" color="#757FF8" />
-				<FontAwesomeIcon icon={['fab', 'twitch']} size="2x" color="#757FF8" />
-				<FontAwesomeIcon icon={['fab', 'twitter']} size="2x" color="#757FF8" />
+				<a href="https://github.com/akadot" target="_blank">
+					<FontAwesomeIcon icon={['fab', 'github']} size="2x" color="#757FF8" /*var(--blue)*/ />
+				</a>
+
+				<a href="https://www.linkedin.com/in/murilo-o" target="_blank">
+					<FontAwesomeIcon icon={['fab', 'linkedin-in']} size="2x" color="#757FF8" />
+				</a>
+
+				<a href="https://dev.to/akadot_" target="_blank">
+					<FontAwesomeIcon icon={['fab', 'dev']} size="2x" color="#757FF8" />
+				</a>
+
+				<a href="https://medium.com/@akadot_" target="_blank">
+					<FontAwesomeIcon icon={['fab', 'medium']} size="2x" color="#757FF8" />
+				</a>
+
+				<a href="https://www.twitch.tv/dotdev_" target="_blank">
+					<FontAwesomeIcon icon={['fab', 'twitch']} size="2x" color="#757FF8" />
+				</a>
+
+				<a href="https://twitter.com/akadot_" target="_blank">
+					<FontAwesomeIcon icon={['fab', 'twitter']} size="2x" color="#757FF8" />
+				</a>
 			</Icons>
 		</SocialContainer>
 	);

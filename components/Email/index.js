@@ -8,8 +8,9 @@ const EmailContainer = styled.div`
 	align-self: flex-end;
 	display: block;
 	position:relative;
-	right:100px;
+	right:70px;
 	bottom:160px;
+	
 
 	@media (max-width: 1100px){
 		display: none;
@@ -35,12 +36,18 @@ const EmailContainer = styled.div`
 		bottom:-160px;
 	}
 
-	& p{
+	& a{
+		text-decoration: none;
+		color: inherit;
 		cursor:pointer;
+		
+	}
+
+	& a p{
 		transition: all .2s ease-in-out;
 	}
 
-	& p:hover{
+	& a p:hover{
 		transform: scale(1.03);
 		color:#fefefe;
 	}
@@ -49,7 +56,9 @@ const EmailContainer = styled.div`
 export default function IconBar() {
 	return (
 		<EmailContainer>
-			<p>muriloholiveira@hotmail.com</p>
+			<a href="mailto:muriloholiveira@hotmail.com">
+				<p> muriloholiveira@hotmail.com </p>
+			</a>
 		</EmailContainer>
 	);
 }
