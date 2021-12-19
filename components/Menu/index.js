@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Link from 'next/link'
 
 const MenuContainer = styled.nav`
-width: 60%;
+width: 100%;
 display: flex;
 flex-direction: row;
 align-items: center;
@@ -12,8 +12,8 @@ justify-content: space-between;
 const MenuItem = styled.a`
 	padding: 15px 10px;
 	position: relative;
-	font-size: 1.5rem;
-	font-weight: 500;
+	font-size: 1.25rem;
+	font-weight: 700;
 	z-index: 1;
 	transition: all 0.2s ease-in-out;
 	cursor: pointer;
@@ -40,18 +40,6 @@ const MenuItem = styled.a`
 		width: 110%;
 	}
 `;
-
-/**
- * Background:#0F1921
- * 
- * Purple:
- * #757FF8
- * #8c25b2
- * #571fdb
- * #c836ff
- * #a333ef
- * #9d65ff
- */
 
 const Menu = () => {
 	return (
