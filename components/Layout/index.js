@@ -1,4 +1,8 @@
 import styled from "styled-components";
+import Menu from '../Menu'
+import Social from '../Social'
+import Email from '../Email'
+import Image from 'next/image'
 
 const PageContainer = styled.section`
 	display: grid;
@@ -32,6 +36,7 @@ const PageContainer = styled.section`
 	&.email{
 		grid-area: email;
 	}
+
 `;
 
 const HeaderContainer = styled.header`
@@ -47,4 +52,25 @@ const HeaderContainer = styled.header`
 	align-items: center;
 `;
 
-export { PageContainer, HeaderContainer }
+export default function Layout({ children }) {
+	return (
+		<PageContainer>
+			<Image
+				alt='Background Pattern'
+				src='/bg.png'
+				layout='fill'
+				objectFit='cover'
+				quality={100}
+				className='background'
+			/>
+			<HeaderContainer className="header">
+				<p className="logo">Logo</p>
+				<Menu className="menu" />
+			</HeaderContainer>
+			<Social className="social" />
+			<main className="content" >{children}</main>
+			<Email className="email" />
+
+		</PageContainer>
+	);
+}

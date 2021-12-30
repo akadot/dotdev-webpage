@@ -31,6 +31,10 @@ a, button, li{
 
 .background{
 	z-index: -1;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
 `;
 
