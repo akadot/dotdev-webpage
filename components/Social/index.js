@@ -5,45 +5,40 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 
 library.add(fab)
 
-const SocialContainer = styled.div`
-	align-self: flex-end;
-	display: block;
-	bottom: 160px;
-	left: 70px;
-	position: relative;
+const SocialContainer = styled.section`
+	position: fixed;
+	bottom: 0;
+	left: 100px;
+	right: auto;
+
+	&::before{
+		content: "";
+		display:block;
+		width: 2px;
+		height: 20px;
+		background-color: #757FF8;
+		margin: 0px auto 10px auto;
+	}
+
+	&::after{
+		content: "";
+		display:block;
+		width: 2px;
+		height: 125px;
+		margin: 10px auto 0px auto;
+		background-color: #757FF8;
+	}
 
 	@media (max-width: 1100px){
 		display: none;
 	}
 `;
 
-const Icons = styled.div`
+const Icons = styled.section`
 	display: flex;
 	flex-direction: column;
-	align-itens: center;
 	gap:20px;
 	position:relative;
-	text-align: left;
-
-	&::before{
-		content: "";
-		position: absolute;
-		width: 2px;
-		height: 20px;
-		background-color: #757FF8;
-		top:-30px;
-		left: 15px;
-	}
-
-	&::after{
-		content: "";
-		position: absolute;
-		width: 2px;
-		height: 150px;
-		background-color: #757FF8;
-		bottom:-160px;
-		left: 15px;
-	}
 
 	& svg{
 		cursor:pointer;

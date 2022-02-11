@@ -1,15 +1,15 @@
 import styled from "styled-components";
 import Link from 'next/link'
 
-const MenuContainer = styled.nav`
-width: 100%;
+const MenuContainer = styled.section`
+width: 80%;
 display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: space-between;
 `;
 
-const MenuItem = styled.a`
+const MenuItem = styled.li`
 	padding: 15px 10px;
 	position: relative;
 	font-size: 1.25rem;
@@ -17,6 +17,7 @@ const MenuItem = styled.a`
 	z-index: 1;
 	transition: all 0.2s ease-in-out;
 	cursor: pointer;
+	list-style: none;
 
 	&::before{
 		content: "";
@@ -44,6 +45,7 @@ const MenuItem = styled.a`
 const Menu = () => {
 	return (
 		<MenuContainer>
+			<Link href="/"><MenuItem><img src="/logo.svg" className="logo" /></MenuItem></Link>
 			<Link href="/"><MenuItem color={"#757FF8"}>home</MenuItem></Link>
 			<Link href="/about"><MenuItem color={"#05f69e"}>about</MenuItem></Link>
 			<Link href="/blog"><MenuItem color={"#ffdd00"}>blog</MenuItem></Link >

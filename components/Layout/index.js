@@ -5,51 +5,27 @@ import Email from '../Email'
 import Image from 'next/image'
 
 const PageContainer = styled.section`
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 100px 1fr;
-	gap:0px 0px;
-	grid-auto-flow: row;
-	grid-template-areas:
-		"header header header"
-		"social content email";
-	height: 100vh;
-	text-align:center;
-	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	/* background-image: linear-gradient(#757FF80a, #0F1921); */
 
-	&.logo{
-		grid-area: logo;
+	& main{
+		padding: 150px 250px; 
+		
+		& h1{
+			font-size: 2.4em;
+		}
 	}
 
-	&.menu{
-		grid-area: menu;
+	@media (max-width: 1100px){
+		padding: 0 150px; 
 	}
-
-	&.social{
-		grid-area: social;
-	}
-
-	&.content{
-		grid-area: content;
-	}
-
-	&.email{
-		grid-area: email;
-	}
-
 `;
 
 const HeaderContainer = styled.header`
-	width:100%;
-	display: grid;
-	grid-template-columns: 1fr 2fr 1fr;
-	grid-template-rows: 100px;
-	gap:0px 0px;
-	grid-auto-flow: row;
-	grid-template-areas:
-		"logo menu .";
-	grid-area: header;
+	display: flex;
 	align-items: center;
+	padding: 10px 0 0 80px;
 `;
 
 export default function Layout({ children }) {
@@ -64,7 +40,6 @@ export default function Layout({ children }) {
 				className='background'
 			/>
 			<HeaderContainer className="header">
-				<p className="logo">Logo</p>
 				<Menu className="menu" />
 			</HeaderContainer>
 			<Social className="social" />
