@@ -1,51 +1,40 @@
 import styled from "styled-components";
-import Menu from '../Menu'
-import Social from '../Social'
-import Email from '../Email'
-import Image from 'next/image'
+import Menu from '../../components/Menu'
+import Social from '../../components/Social'
+import Email from '../../components/Email'
+import Footer from '../../components/Footer'
 
 const PageContainer = styled.section`
 	display: flex;
 	flex-direction: column;
-	/* background-image: linear-gradient(#757FF80a, #0F1921); */
+	background-image: url('./top.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
 
 	& main{
-		padding: 150px 250px; 
-		
-		& h1{
-			font-size: 2.4em;
-		}
-	}
-
-	@media (max-width: 1100px){
-		padding: 0 150px; 
+		padding: 150px 200px; 
 	}
 `;
+
+
 
 const HeaderContainer = styled.header`
 	display: flex;
 	align-items: center;
-	padding: 10px 0 0 80px;
+	justify-content: center;
+	padding-top: 20px;
 `;
 
 export default function Layout({ children }) {
 	return (
-		<PageContainer>
-			<Image
-				alt='Background Pattern'
-				src='/bg.png'
-				layout='fill'
-				objectFit='cover'
-				quality={100}
-				className='background'
-			/>
+		<PageContainer id="init">
 			<HeaderContainer className="header">
 				<Menu className="menu" />
 			</HeaderContainer>
 			<Social className="social" />
 			<main className="content" >{children}</main>
 			<Email className="email" />
-
+			<Footer />
 		</PageContainer>
 	);
 }

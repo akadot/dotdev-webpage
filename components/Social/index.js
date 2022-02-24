@@ -1,14 +1,12 @@
 import styled from 'styled-components';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fab } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedinIn, faDev, faMedium, faTwitch, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
-library.add(fab)
 
 const SocialContainer = styled.section`
 	position: fixed;
 	bottom: 0;
-	left: 100px;
+	left: 50px;
 	right: auto;
 
 	&::before{
@@ -29,9 +27,6 @@ const SocialContainer = styled.section`
 		background-color: #757FF8;
 	}
 
-	@media (max-width: 1100px){
-		display: none;
-	}
 `;
 
 const Icons = styled.section`
@@ -57,27 +52,27 @@ export default function IconBar() {
 		<SocialContainer>
 			<Icons>
 				<a href="https://github.com/akadot" target="_blank">
-					<FontAwesomeIcon icon={['fab', 'github']} size="2x" color="#757FF8" /*var(--blue)*/ />
+					<FontAwesomeIcon icon={faGithub} size="lg" color="#757FF8" /*var(--blue)*/ />
 				</a>
 
 				<a href="https://www.linkedin.com/in/murilo-o" target="_blank">
-					<FontAwesomeIcon icon={['fab', 'linkedin-in']} size="2x" color="#757FF8" />
+					<FontAwesomeIcon icon={faLinkedinIn} size="lg" color="#757FF8" />
 				</a>
 
 				<a href="https://dev.to/akadot_" target="_blank">
-					<FontAwesomeIcon icon={['fab', 'dev']} size="2x" color="#757FF8" />
+					<FontAwesomeIcon icon={faDev} size="lg" color="#757FF8" />
 				</a>
 
 				<a href="https://medium.com/@akadot_" target="_blank">
-					<FontAwesomeIcon icon={['fab', 'medium']} size="2x" color="#757FF8" />
+					<FontAwesomeIcon icon={faMedium} size="lg" color="#757FF8" />
 				</a>
 
 				<a href="https://www.twitch.tv/dotdev_" target="_blank">
-					<FontAwesomeIcon icon={['fab', 'twitch']} size="2x" color="#757FF8" />
+					<FontAwesomeIcon icon={faTwitch} size="lg" color="#757FF8" />
 				</a>
 
 				<a href="https://twitter.com/akadot_" target="_blank">
-					<FontAwesomeIcon icon={['fab', 'twitter']} size="2x" color="#757FF8" />
+					<FontAwesomeIcon icon={faTwitter} size="lg" color="#757FF8" />
 				</a>
 			</Icons>
 		</SocialContainer>

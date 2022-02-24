@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const EmailContainer = styled.section`
 	position: fixed;
 	bottom: 0;
-	right: 100px;
+	right: 50px;
 	left: auto;
 
 	&::before{
@@ -25,9 +25,6 @@ const EmailContainer = styled.section`
 		margin: 10px auto 0px auto;
 	}
 
-	@media (max-width: 1100px){
-		display: none;
-	}
 `;
 
 const Email = styled.section`
@@ -39,7 +36,7 @@ const Email = styled.section`
 	& a{
 		color: #757FF8;
 		font-weight: 600;
-		font-size:1.3em;
+		font-size:1em;
 		writing-mode: vertical-rl;
 		text-decoration: none;
 		cursor:pointer;
