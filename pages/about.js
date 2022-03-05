@@ -4,7 +4,7 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>dot_ - About</title>
+				<title>dot - About</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 			</Head>
 			<h1>About</h1>

@@ -1,36 +1,17 @@
-import GlobalStyle from '../components/GlobalStyle'
-import Image from 'next/image'
-import { PageContainer, HeaderContainer } from "../components/Layout"
-import Menu from '../components/Menu'
-import Social from '../components/Social'
-import Email from '../components/Email'
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core'
+import GlobalStyle from '../styles/GlobalStyle'
+import Layout from "../styles/Layout/index"
+config.autoAddCss = true;
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Image
-        alt="Background Pattern"
-        src="/bg.png"
-        layout='fill'
-        objectFit='cover'
-        quality={75}
-        className='background'
-      />
+      <GlobalStyle />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
 
-      <PageContainer>
-
-        <GlobalStyle />
-
-        <HeaderContainer className="header">
-          <p className="logo">Logo</p>
-          <Menu className="menu" />
-        </HeaderContainer>
-
-        <Social className="social" />
-        <Component {...pageProps} className="content" />
-        <Email className="email" />
-
-      </PageContainer>
     </>
   )
 }

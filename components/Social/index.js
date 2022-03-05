@@ -1,49 +1,39 @@
 import styled from 'styled-components';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fab } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedinIn, faDev, faMedium, faTwitch, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
-library.add(fab)
 
-const SocialContainer = styled.div`
-	align-self: flex-end;
-	display: block;
-	bottom: 160px;
-	left: 70px;
-	position: relative;
-
-	@media (max-width: 1100px){
-		display: none;
-	}
-`;
-
-const Icons = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-itens: center;
-	gap:20px;
-	position:relative;
-	text-align: left;
+const SocialContainer = styled.section`
+	position: fixed;
+	bottom: 0;
+	left: 50px;
+	right: auto;
 
 	&::before{
 		content: "";
-		position: absolute;
+		display:block;
 		width: 2px;
 		height: 20px;
 		background-color: #757FF8;
-		top:-30px;
-		left: 15px;
+		margin: 0px auto 10px auto;
 	}
 
 	&::after{
 		content: "";
-		position: absolute;
+		display:block;
 		width: 2px;
-		height: 150px;
+		height: 125px;
+		margin: 10px auto 0px auto;
 		background-color: #757FF8;
-		bottom:-160px;
-		left: 15px;
 	}
+
+`;
+
+const Icons = styled.section`
+	display: flex;
+	flex-direction: column;
+	gap:20px;
+	position:relative;
 
 	& svg{
 		cursor:pointer;
@@ -62,27 +52,27 @@ export default function IconBar() {
 		<SocialContainer>
 			<Icons>
 				<a href="https://github.com/akadot" target="_blank">
-					<FontAwesomeIcon icon={['fab', 'github']} size="2x" color="#757FF8" /*var(--blue)*/ />
+					<FontAwesomeIcon icon={faGithub} size="lg" color="#757FF8" /*var(--blue)*/ />
 				</a>
 
 				<a href="https://www.linkedin.com/in/murilo-o" target="_blank">
-					<FontAwesomeIcon icon={['fab', 'linkedin-in']} size="2x" color="#757FF8" />
+					<FontAwesomeIcon icon={faLinkedinIn} size="lg" color="#757FF8" />
 				</a>
 
 				<a href="https://dev.to/akadot_" target="_blank">
-					<FontAwesomeIcon icon={['fab', 'dev']} size="2x" color="#757FF8" />
+					<FontAwesomeIcon icon={faDev} size="lg" color="#757FF8" />
 				</a>
 
 				<a href="https://medium.com/@akadot_" target="_blank">
-					<FontAwesomeIcon icon={['fab', 'medium']} size="2x" color="#757FF8" />
+					<FontAwesomeIcon icon={faMedium} size="lg" color="#757FF8" />
 				</a>
 
 				<a href="https://www.twitch.tv/dotdev_" target="_blank">
-					<FontAwesomeIcon icon={['fab', 'twitch']} size="2x" color="#757FF8" />
+					<FontAwesomeIcon icon={faTwitch} size="lg" color="#757FF8" />
 				</a>
 
 				<a href="https://twitter.com/akadot_" target="_blank">
-					<FontAwesomeIcon icon={['fab', 'twitter']} size="2x" color="#757FF8" />
+					<FontAwesomeIcon icon={faTwitter} size="lg" color="#757FF8" />
 				</a>
 			</Icons>
 		</SocialContainer>
