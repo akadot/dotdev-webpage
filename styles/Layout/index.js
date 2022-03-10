@@ -12,7 +12,7 @@ const PageContainer = styled.section`
 	background-size: 100%;
 
 	& main{
-		padding: 150px 200px; 
+		padding: 100px 200px; 
 	}
 `;
 

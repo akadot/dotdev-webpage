@@ -5,14 +5,6 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 
-const ProjectContainer = styled.section`
-	display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: auto;
-  grid-area: auto;
-  grid-gap: 70px;
-  margin-top: 50px;
-`;
 
 const ProjectItem = styled.section`
 	display: flex;
@@ -22,7 +14,8 @@ const ProjectItem = styled.section`
 	height: 200px;
 	width: 250px;
 	padding: 30px 20px;
-	border: 3px solid var(--purple);
+	border: 3px solid;
+	border-color: ${props => props.color};
 	border-radius: 10px;
 	word-break: break-all;
 	background-color: var(--bg);
@@ -55,20 +48,16 @@ const ProjectItem = styled.section`
 	}
 `;
 
-const Project = () => {
+const Project = (props) => {
 	return (
-		<ProjectContainer>
-
-			<ProjectItem>
-				<h1><FontAwesomeIcon icon={faGithub} /> game-of-life</h1>
-				<p>lalalalalalalalalalalalalalalalalalalalalalalalalalalalalalala</p>
-				<section className='project-bottom'>
-					<span>Javascript</span>
-					<Link href="#"><FontAwesomeIcon icon={faExternalLinkAlt} /></Link>
-				</section>
-			</ProjectItem>
-
-		</ProjectContainer>
+		<ProjectItem color={props.color}>
+			<h1><FontAwesomeIcon icon={faGithub} />{props.name}</h1>
+			<p>{props.description}</p>
+			<section className='project-bottom'>
+				<span>{props.language}</span>
+				<Link href={props.url} ><a target="_blank"><FontAwesomeIcon icon={faExternalLinkAlt} /></a></Link>
+			</section>
+		</ProjectItem>
 	)
 
 }
