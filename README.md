@@ -1,4 +1,6 @@
-# My Personal Webpage
+# OLD VERSION - My Personal Webpage
+
+NEW PAGE [HERE](https://github.com/akadot/dotdev.com)
 
 A place to join everything I do/did/doing/will do
 
